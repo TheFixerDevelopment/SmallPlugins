@@ -13,7 +13,7 @@ class Main extends PluginBase implements Listener {
     }
 
     public function onQuery(QueryRegenerateEvent $event) {
-        $count = $event->getServer()->setPlayerCount();
+        $count = $event->setPlayerCount();
         $event->setMaxPlayerCount(intval(count($this->getServer()->getOnlinePlayers())+$count));
     }
 }
